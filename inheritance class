@@ -1,0 +1,24 @@
+class Person:
+    def __init__(self,name,gender,city,dob):
+        self.name = name
+        self.gender = gender
+        self.city = city
+        self.dob = dob
+
+    def address(self):
+        addr=f"Name : {self.name}\n Gender : {self.gender}\nCity : {self.city}\nDOB : {self.dob}"
+        return addr
+class Friend(Person):
+    salary = 10000
+    def __init__(self,name,gender,city,dob,company):
+        super().__init__(name,gender,city,dob)
+        self.company = company
+class Relative(Person):
+    pass
+
+per1 = Relative("surya","female","cnennai",2003)
+
+
+
+print(per1.name)
+print(per1.city)
